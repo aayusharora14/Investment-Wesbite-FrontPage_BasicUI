@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>InvestoHub - Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #080808;
+            max-height: 68px;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            max-height: min-content;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            position: relative;
+            left: 300px;
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            margin-left: 38px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f2b705;
+        }
+
+        .login-button {
+            margin-right: 20px;
+        }
+
+        .login-button .cta-button {
+            display: inline-block;
+            position: relative;
+            right: -530px;
+            top: 20px;
+            background-color: #f2b705;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        .login-button .cta-button:hover {
+            background-color: #333;
+            color: #f2b705;
+            transform: scale(1.05);
+        }
+
+        .search-bar {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #f2b705;
+            color: #333;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #333;
+            color: #f2b705;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            background-color: #080808;
+            color: #ccc;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: #141414;
+        }
+
+        .product-card:hover .product-photo {
+            filter: blur(5px);
+            /* Apply a blur effect to the product photo when the card is hovered */
+        }
+
+        .product-photo {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .interest-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f2b705;
+            color: #333;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: none;
+        }
+
+        .product-card:hover .interest-button {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <img src="logo.png" alt="InvestHub Logo" class="logo">
+                <h1 class="title">InvestoHub</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="login-button">
+                    <a href="signup.html" class="cta-button">Login/Signup</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="locationSearch" placeholder="Search by Location">
+        <button>Search</button>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card" data-location="New York">
+            <img class="product-photo" src="product1.png" alt="Product 1">
+            <h2>Product Name 1</h2>
+            <p>Location: New York</p>
+            <p>Price: $49.99</p>
+            <a href="propertycontact.html" class="interest-button">Show Interest</a>
+        </div>
+        <div class="product-card" data-location="Los Angeles">
+            <img class="product-photo" src="product2.png" alt="Product 2">
+            <h2>Product Name 2</h2>
+            <p>Location: Los Angeles</p>
+            <p>Price: $39.99</p>
+            <a href="propertycontact.html" class="interest-button">Show Interest</a>
+        </div>
+        <div class="product-card" data-location="Chicago">
+            <img class="product-photo" src="product3.jpeg" alt="Product 3">
+            <h2>Product Name 3</h2>
+            <p>Location: Chicago</p>
+            <p>Price: $59.99</p>
+            <a href="propertycontact.html" class="interest-button">Show Interest</a>
+        </div>
+
+    </div>
+</body>
+<script>
+    const locationSearch = document.getElementById('locationSearch');
+    const productCards = document.querySelectorAll('.product-card');
+
+    locationSearch.addEventListener('input', () => {
+        const searchTerm = locationSearch.value.toLowerCase();
+        productCards.forEach((card) => {
+            const location = card.getAttribute('data-location').toLowerCase();
+            if (location.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+    const properties = JSON.parse(localStorage.getItem('properties')) || [];
+
+    const productGrid = document.querySelector('.product-grid');
+
+    properties.forEach((property) => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+
+        const productPhoto = document.createElement('img');
+        productPhoto.src = property.propertyImage;
+        productPhoto.alt = property.propertyName;
+        productPhoto.classList.add('product-photo');
+
+        const h2 = document.createElement('h2');
+        h2.textContent = property.propertyName;
+
+        const pLocation = document.createElement('p');
+        pLocation.textContent = 'Location: ' + property.propertyLocation;
+
+        const pPrice = document.createElement('p');
+        pPrice.textContent = 'Price: ' + property.propertyPrice;
+
+
+
+
+        productCard.appendChild(productPhoto);
+        productCard.appendChild(h2);
+        productCard.appendChild(pLocation);
+        productCard.appendChild(pPrice);
+
+        productGrid.appendChild(productCard);
+    });
+</script>
+
+</html>
